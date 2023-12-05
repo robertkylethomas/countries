@@ -18,4 +18,10 @@ export class CountriesService {
       map((countries: Country[]) => countries.slice(1,11)),
       map((countries: Country[]) => countries.sort((a, b)  => ('' + a.name.common).localeCompare(b.name.common))))
   }
+
+  getCountryByCountryCode(code: string): Observable<Country>{
+    return this.httpClient.get(environment.productionAPI.concat(`alpha/${code}`)).pipe(
+      map((country: Country[]) => country.at(0))
+    ) as Observable<Country>;
+  }
 }

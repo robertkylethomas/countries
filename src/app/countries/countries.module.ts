@@ -16,7 +16,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     CountriesComponent,
-    CountryComponent
+    CountryComponent,
+    CountryDetailComponent
   ],
   imports: [
     CommonModule,

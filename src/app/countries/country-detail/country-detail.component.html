@@ -1,1 +1,19 @@
-<p>country-detail works!</p>
+@if(country$ | async; as country){
+  <h1>
+    {{country.name.common}}
+  </h1>
+  <ul>
+    <li attr-name="native-name">{{country.name.official}}</li>
+  </ul>
+}
+
+{{country$ | async | json}}
+<!--
+<ng-container *ngIf="country$ | async as country">
+  <h1>
+    {{country.name.common}}
+  </h1>
+  <ul>
+    <li attr-name="native-name">{{country.name.official}}</li>
+  </ul>
+</ng-container> -->

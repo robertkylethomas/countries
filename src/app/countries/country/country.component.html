@@ -8,11 +8,17 @@
   <li>{{country.region}}</li>
   <li>
     <ul >
-      <li *ngFor="let capital of country.capital">
+      <!-- <li *ngFor="let capital of country.capital">
+        {{capital}}
+      </li> -->
+
+      @for(capital of country.capital; track capital){
+        <li>
         {{capital}}
       </li>
+      }
     </ul>
   </li>
-  <li>{{country.cioc}}</li>
+  <li><a [routerLink]="country.cca2">{{country.cca2}}</a></li>
 </ul>
 </div>

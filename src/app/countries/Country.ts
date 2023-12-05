@@ -3,6 +3,7 @@ export interface Country{
     common: string,
     official: string,
   };
+  "cca2": string;
   "topLevelDomain": string[];
   "alpha2Code": string;
   "alpha3Code": string;
