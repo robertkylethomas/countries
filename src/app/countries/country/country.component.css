@@ -1,0 +1,10 @@
+:host{
+  height: 100%;
+  display: block;
+}
+.card{
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

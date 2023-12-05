@@ -1,0 +1,11 @@
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  gap: 1rem;
+  grid-template-rows: auto;
+}
+
+app-country{
+  height: 100%;
+  display: block;
+}

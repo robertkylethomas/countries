@@ -1,0 +1,12 @@
+<!-- <ul *ngIf="countries$ | async as countries">
+  <li *ngFor="let country of countries">
+    {{country.name.common}}
+  </li>
+</ul> -->
+
+
+<ng-container *ngIf="countries$ | async as countries">
+  <div class="grid-container">
+    <app-country *ngFor="let country of countries" [country]="country"></app-country>
+  </div>
+</ng-container>

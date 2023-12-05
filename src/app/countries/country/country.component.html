@@ -1,0 +1,18 @@
+<div class="card">
+  <header>
+    <img [src]="country.flags?.png" alt="">
+  </header>
+  <h4>{{country.name?.common}}</h4>
+<ul>
+  <li>{{country.population}}</li>
+  <li>{{country.region}}</li>
+  <li>
+    <ul >
+      <li *ngFor="let capital of country.capital">
+        {{capital}}
+      </li>
+    </ul>
+  </li>
+  <li>{{country.cioc}}</li>
+</ul>
+</div>
