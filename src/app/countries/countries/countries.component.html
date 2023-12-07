@@ -7,7 +7,7 @@
 <div class="scroll-container">
     <ng-container *ngIf="filteredCountries$ | async as countries">
         <div class="grid-container">
-            <app-country *ngFor="let country of countries" [country]="country"></app-country>
+            <app-country *ngFor="let country of countries" [country]="country" (click)="routeTo(country.cca2)"></app-country>
         </div>
     </ng-container>
 </div>

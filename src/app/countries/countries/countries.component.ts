@@ -1,8 +1,10 @@
+import { environment } from './../../../environments/environment';
 import { tap } from 'rxjs/operators';
 import { Component, Inject, OnInit } from '@angular/core';
 import { CountriesService } from '../countries.service';
 import { Observable, of, map, mergeMap, distinct, toArray, mergeAll } from 'rxjs';
 import { Country } from '../Country';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-countries',
@@ -12,7 +14,7 @@ import { Country } from '../Country';
 export class CountriesComponent implements OnInit {
 
 
-  constructor(private countriesService: CountriesService){}
+  constructor(private countriesService: CountriesService, private router: Router){}
 
   countries$:Observable<Country[]> = of([]);
   filteredCountries$: Observable<Country[]> = this.countries$;
@@ -40,6 +42,10 @@ export class CountriesComponent implements OnInit {
       map((countries: Country[]) => countries.filter((country: Country) => country.region.toLowerCase() === event.toLowerCase())),
       tap(res => console.log(res))
     )
+  }
+
+  routeTo(countryCode: string){
+    this.router.navigate([countryCode])
   }
 
 }

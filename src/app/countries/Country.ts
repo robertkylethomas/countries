@@ -4,7 +4,7 @@ export interface Country{
     official: string,
   };
   "cca2": string;
-  "topLevelDomain": string[];
+  "tld": string[];
   "alpha2Code": string;
   "alpha3Code": string;
   "callingCodes": string[];

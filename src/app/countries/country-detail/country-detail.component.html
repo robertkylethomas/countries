@@ -1,19 +1,17 @@
 @if(country$ | async; as country){
-  <h1>
+<h1>
     {{country.name.common}}
-  </h1>
-  <ul>
+</h1>
+<ul>
     <li attr-name="native-name">{{country.name.official}}</li>
-  </ul>
-}
+    <li attr-name="population">{{country.population}}</li>
+    <li attr-name="region">{{country.region}}</li>
+    <li attr-name="sub region">{{country.subregion}}</li>
+    <li attr-name="capital">{{country.capital}}</li>
+    <li attr-name="top level domain">{{country.tld}}</li>
+    <li attr-name="currencies">{{country.currencies | json}}</li>
+    <li attr-name="languages">{{country.languages | json}}</li>
+    <li attr-name="border countries">{{country.borders}}</li>
 
-{{country$ | async | json}}
-<!--
-<ng-container *ngIf="country$ | async as country">
-  <h1>
-    {{country.name.common}}
-  </h1>
-  <ul>
-    <li attr-name="native-name">{{country.name.official}}</li>
-  </ul>
-</ng-container> -->
+</ul>
+}
