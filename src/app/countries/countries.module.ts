@@ -4,6 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { CountriesComponent } from './countries/countries.component';
 import { CountryComponent } from './country/country.component';
 import { CountryDetailComponent } from './country-detail/country-detail.component';
+import { SearchComponent } from './search/search.component';
+
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -17,10 +20,13 @@ const routes: Routes = [
   declarations: [
     CountriesComponent,
     CountryComponent,
-    CountryDetailComponent
+    CountryDetailComponent,
+    SearchComponent
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
+    FormsModule,
     RouterModule.forChild(routes)
   ]
 })

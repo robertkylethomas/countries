@@ -3,10 +3,11 @@
     {{country.name.common}}
   </li>
 </ul> -->
-
-
-<ng-container *ngIf="countries$ | async as countries">
-  <div class="grid-container">
-    <app-country *ngFor="let country of countries" [country]="country"></app-country>
-  </div>
-</ng-container>
+<app-search (changeSearchText)="getFilteredCountries($event)" (changeSearchRegion)="filterByRegion($event)"></app-search>
+<div class="scroll-container">
+    <ng-container *ngIf="filteredCountries$ | async as countries">
+        <div class="grid-container">
+            <app-country *ngFor="let country of countries" [country]="country"></app-country>
+        </div>
+    </ng-container>
+</div>

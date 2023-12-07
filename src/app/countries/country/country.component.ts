@@ -13,6 +13,6 @@ export class CountryComponent implements OnInit {
 
 
   ngOnInit(): void {
-    console.log(this.country)
+
   }
 }
