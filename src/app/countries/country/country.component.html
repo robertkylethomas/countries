@@ -1,26 +1,19 @@
 <div class="card">
-    <header>
-        <img [src]="country.flags?.png" alt="">
-    </header>
-    <main>
-        <h4>{{country.name?.common}}</h4>
-        <ul>
-            <li>{{country.population}}</li>
-            <li>{{country.region}}</li>
-            <li>
-                <ul>
-                    <!-- <li *ngFor="let capital of country.capital">
-        {{capital}}
-      </li> -->
-
-                    @for(capital of country.capital; track capital){
-                    <li>
-                        {{capital}}
-                    </li>
-                    }
-                </ul>
-            </li>
-            <li><a [routerLink]="country.cca2">{{country.cca2}}</a></li>
-        </ul>
-    </main>
+  <header>
+    <img [src]="country.flags?.png" alt="" />
+  </header>
+  <main>
+    <h2>{{ country.name?.common }}</h2>
+    <ul>
+      <li data-title="population">{{ country.population }}</li>
+      <li data-title="region">{{ country.region }}</li>
+      <li data-title="capital">
+        @for(capital of country.capital; track capital){
+        <span>
+          {{ capital }}
+        </span>
+        }
+      </li>
+    </ul>
+  </main>
 </div>

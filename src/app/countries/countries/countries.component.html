@@ -3,11 +3,24 @@
     {{country.name.common}}
   </li>
 </ul> -->
-<app-search (changeSearchText)="getFilteredCountries($event)" (changeSearchRegion)="filterByRegion($event)"></app-search>
+<header>
+  <main>
+    <h1>Where in the world</h1>
+    <div>Dark Mode</div>
+  </main>
+</header>
+<app-search
+  (changeSearchText)="getFilteredCountries($event)"
+  (changeSearchRegion)="filterByRegion($event)"
+></app-search>
 <div class="scroll-container">
-    <ng-container *ngIf="filteredCountries$ | async as countries">
-        <div class="grid-container">
-            <app-country *ngFor="let country of countries" [country]="country" (click)="routeTo(country.cca2)"></app-country>
-        </div>
-    </ng-container>
+  <ng-container *ngIf="filteredCountries$ | async as countries">
+    <div class="grid-container">
+      <app-country
+        *ngFor="let country of countries"
+        [country]="country"
+        (click)="routeTo(country.cca2)"
+      ></app-country>
+    </div>
+  </ng-container>
 </div>

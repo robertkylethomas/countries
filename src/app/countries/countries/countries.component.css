@@ -1,24 +1,39 @@
 :host {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
-    gap: 1rem;
-    grid-template-rows: auto;
-    width: 90%;
+  display: grid;
+  grid-template-columns: repeat(4, 20%);
+  grid-template-rows: auto;
+  width: 100%;
+  gap: 5dvw;
 }
 
 app-country {
-    height: 100%;
-    display: block;
+  height: 100%;
+  display: block;
 }
 
 .scroll-container {
-    height: 80vh;
-    overflow-y: scroll;
+  height: 80vh;
+  overflow-y: scroll;
+  width: 80vw;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: var(--elements);
+}
+
+header > main {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
