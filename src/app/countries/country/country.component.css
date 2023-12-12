@@ -2,6 +2,8 @@
   height: 100%;
   display: block;
   padding-bottom: 2rem;
+  box-shadow: var(--box-shadow);
+  background-color: var(--elements);
 }
 
 ul {
@@ -21,9 +23,11 @@ h2 {
   margin-bottom: 1rem;
 }
 
-img {
-  width: 100%;
-  height: 150px;
+.image {
+  background-size: cover; /* This will make sure the background image covers the entire container */
+  background-position: center; /* This will center the background image */
+  width: 100%; /* Set the width of the container */
+  height: 20dvh; /* Set the height of the container */
 }
 
 main {

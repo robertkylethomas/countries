@@ -23,17 +23,3 @@ app-country {
   overflow-y: scroll;
   width: 80vw;
 }
-
-header {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  background-color: var(--elements);
-}
-
-header > main {
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}

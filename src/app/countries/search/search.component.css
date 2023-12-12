@@ -11,4 +11,15 @@ input[type='search'] {
   padding: 1rem;
   text-transform: capitalize;
   width: 40%;
+  color: var(--text-colour);
+}
+
+select {
+  background: var(--elements);
+  color: var(--text-colour);
+  padding: 1rem;
+}
+
+option {
+  margin-bottom: 0.5rem;
 }

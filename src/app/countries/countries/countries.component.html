@@ -3,12 +3,7 @@
     {{country.name.common}}
   </li>
 </ul> -->
-<header>
-  <main>
-    <h1>Where in the world</h1>
-    <div>Dark Mode</div>
-  </main>
-</header>
+
 <app-search
   (changeSearchText)="getFilteredCountries($event)"
   (changeSearchRegion)="filterByRegion($event)"

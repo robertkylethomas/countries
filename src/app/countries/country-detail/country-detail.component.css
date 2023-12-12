@@ -1,0 +1,46 @@
+:host {
+  width: 80%;
+  margin: auto;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  display: flex;
+  gap: 2rem;
+}
+
+.image {
+  width: 500px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+ul {
+  list-style: none;
+}
+
+li::before {
+  content: attr(data-name) ':';
+  text-transform: capitalize;
+  margin-right: 1ch;
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+}
+
+li button {
+  margin-left: 1rem;
+}
+
+.neighbours::before {
+  content: attr(data-name);
+}
+
+.neighbours button {
+  margin-left: 0.5rem;
+}

@@ -1,17 +1,33 @@
 @if(country$ | async; as country){
-<h1>
-    {{country.name.common}}
-</h1>
-<ul>
-    <li attr-name="native-name">{{country.name.official}}</li>
-    <li attr-name="population">{{country.population}}</li>
-    <li attr-name="region">{{country.region}}</li>
-    <li attr-name="sub region">{{country.subregion}}</li>
-    <li attr-name="capital">{{country.capital}}</li>
-    <li attr-name="top level domain">{{country.tld}}</li>
-    <li attr-name="currencies">{{country.currencies | json}}</li>
-    <li attr-name="languages">{{country.languages | json}}</li>
-    <li attr-name="border countries">{{country.borders}}</li>
-
-</ul>
+<button>Back</button>
+<div class="container">
+  <div
+    class="image"
+    [style.backgroundImage]="'url(' + country.flags?.png + ')'"
+  ></div>
+  <div>
+    <h1>
+      {{ country.name.common }}
+    </h1>
+    <main>
+      <ul>
+        <li data-name="native-name">{{ country.name.official }}</li>
+        <li data-name="population">{{ country.population }}</li>
+        <li data-name="region">{{ country.region }}</li>
+        <li data-name="sub region">{{ country.subregion }}</li>
+        <li data-name="capital">{{ country.capital }}</li>
+      </ul>
+      <ul>
+        <li data-name="top level domain">{{ country.tld }}</li>
+        <li data-name="currencies">{{ country.currencies | json }}</li>
+        <li data-name="languages">{{ country.languages | json }}</li>
+      </ul>
+    </main>
+    <div class="neighbours" data-name="Borders:">
+      <button *ngFor="let neighbour of neighbours$ | async">
+        {{ neighbour.name.common }}
+      </button>
+    </div>
+  </div>
+</div>
 }
