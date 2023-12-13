@@ -1,41 +1,42 @@
-export interface Country{
-  "name": {
-    common: string,
-    official: string,
+export interface Country {
+  name: {
+    common: string;
+    official: string;
   };
-  "cca2": string;
-  "tld": string[];
-  "alpha2Code": string;
-  "alpha3Code": string;
-  "callingCodes": string[];
-  "capital": string[];
-  "altSpellings": string[];
-  "subregion": string;
-  "region": string;
-  "population": number;
-  "latlng": number[];
-  "demonym": string;
-  "area": number;
-  "timezones": string[];
-  "borders": string[];
-  "nativeName": string;
-  "numericCode": string;
-  "flags": {
-    "svg": string;
-    "png": string;
-    "alt": string;
+  cca2: string;
+  cca3: string;
+  tld: string[];
+  alpha2Code: string;
+  alpha3Code: string;
+  callingCodes: string[];
+  capital: string[];
+  altSpellings: string[];
+  subregion: string;
+  region: string;
+  population: number;
+  latlng: number[];
+  demonym: string;
+  area: number;
+  timezones: string[];
+  borders: string[];
+  nativeName: string;
+  numericCode: string;
+  flags: {
+    svg: string;
+    png: string;
+    alt: string;
   };
-  "currencies": [
+  currencies: [
     {
-      "code": string;
-      "name": string;
-      "symbol": string
+      code: string;
+      name: string;
+      symbol: string;
     }
   ];
-  "languages":string[];
-  "translations": string[];
-  "flag": string;
-  "regionalBlocs": string[];
-  "cioc": string;
-  "independent": boolean
+  languages: string[];
+  translations: string[];
+  flag: string;
+  regionalBlocs: string[];
+  cioc: string;
+  independent: boolean;
 }

@@ -6,28 +6,33 @@ import { CountryComponent } from './country/country.component';
 import { CountryDetailComponent } from './country-detail/country-detail.component';
 import { SearchComponent } from './search/search.component';
 
-import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CountryResolver } from '../country.resolver';
 
 const routes: Routes = [
   {
-    path: '', component: CountriesComponent,
-  },{
-    path: ':id', component: CountryDetailComponent
-  }
-]
+    path: '',
+    component: CountriesComponent,
+  },
+  {
+    path: ':id',
+    component: CountryDetailComponent,
+    resolve: { country: CountryResolver },
+  },
+];
 
 @NgModule({
   declarations: [
     CountriesComponent,
     CountryComponent,
     CountryDetailComponent,
-    SearchComponent
+    SearchComponent,
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
-    RouterModule.forChild(routes)
-  ]
+    RouterModule.forChild(routes),
+  ],
 })
-export class CountriesModule { }
+export class CountriesModule {}

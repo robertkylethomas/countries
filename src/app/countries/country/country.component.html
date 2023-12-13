@@ -9,17 +9,13 @@
   <main>
     <h2>{{ country.name?.common }}</h2>
     <ul>
+      <li data-title="population">{{ country.cca3 }}</li>
       <li data-title="population">{{ country.population }}</li>
       <li data-title="region">{{ country.region }}</li>
       <li data-title="capital">
-        @for(capital of country.capital; track capital){
         <span>
-          {{ capital
-          }}<ng-container *ngIf="(country?.capital)!.length > 1"
-            >,</ng-container
-          >
+          {{ country.capital }}
         </span>
-        }
       </li>
     </ul>
   </main>

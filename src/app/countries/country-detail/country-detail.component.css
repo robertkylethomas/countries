@@ -44,3 +44,9 @@ li button {
 .neighbours button {
   margin-left: 0.5rem;
 }
+
+.buttonContainer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+}
